@@ -1,0 +1,23 @@
+{
+  "name": "Next.js my template",
+  "short_name": "next template",
+  "theme_color": "#c61561",
+  "background_color": "#000",
+  "display": "standalone",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "img/ico_32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "img/ico_152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
