@@ -1,0 +1,96 @@
+{
+  "name": "next-template",
+  "version": "0.0.1",
+  "description": "Next.js 9.4 my template",
+  "keywords": [
+    "Next.js",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:osakana9114/acnh-turnip-tracker.git"
+  },
+  "author": "webdev",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-prettier/recommended",
+      "stylelint-config-recess-order"
+    ],
+    "syntax": "scss",
+    "plugins": [
+      "stylelint-scss",
+      "stylelint-order",
+      "stylelint-prettier"
+    ],
+    "rules": {
+      "prettier/prettier": true,
+      "order/order": [
+        [
+          "dollar-variables",
+          "declarations",
+          "rules"
+        ]
+      ],
+      "color-hex-length": "short",
+      "length-zero-no-unit": true
+    }
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "extends": [
+      "react-app",
+      "airbnb-base",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+      "import"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 3% in JP",
+    "ie >= 11",
+    "iOS >= 10",
+    "Android >= 5.1"
+  ],
+  "dependencies": {
+    "eslint": "^7.0.0",
+    "modern-css-reset": "^1.1.0",
+    "next": "9.4.4",
+    "prettier": "^2.0.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass-mq": "^5.0.1",
+    "stylelint": "^13.4.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.17.2"
+  }
+}
