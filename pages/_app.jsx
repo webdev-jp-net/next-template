@@ -1,5 +1,5 @@
-import GlobalHeader from '../components/layout/header';
-import GlobalNav from '../components/layout/nav';
+import GlobalHeader from '@/components/layout/header';
+import GlobalNav from '@/components/layout/nav';
 import '../style/style.scss';
 
 const MyApp = ({ Component, pageProps }) => {
