@@ -1,17 +1,31 @@
+import { withRouter } from 'next/router';
 import Link from 'next/link';
-export default () => (
-  <nav className="l-nav">
-    <ul>
-      <li>
-        <Link href="/">
-          <a>index</a>
+export default withRouter(({ router }) => {
+  const paths = [
+    {
+      id: 'index',
+      path: '/',
+    },
+    {
+      id: 'other',
+      path: '/other',
+    },
+  ];
+  const list = [];
+  paths.map(item => {
+    const current = item.path === router.pathname;
+    list.push(
+      <li key={item.id}>
+        <Link href={item.path}>
+          <a aria-current={current ? 'page' : undefined}>{item.id}</a>
         </Link>
       </li>
-      <li>
-        <Link href="/other">
-          <a>other</a>
-        </Link>
-      </li>
-    </ul>
-  </nav>
-);
+    );
+  });
+
+  return (
+    <nav className="l-nav">
+      <ul>{list}</ul>
+    </nav>
+  );
+});
