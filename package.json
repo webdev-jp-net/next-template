@@ -15,7 +15,8 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "NODE_ENV=production npm run build && npm run export"
   },
   "prettier": {
     "printWidth": 100,
